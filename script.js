@@ -2,7 +2,6 @@ const apiKey = 'api_key=74207837693808ec992c37ac2edfd112';
 const baseUrl = 'https://api.themoviedb.org/3';
 const apiUrl = baseUrl+"/discover/movie?sort_by=popularity.desc&"+apiKey;
 const imageUrl = "https://image.tmdb.org/t/p/original";
-console.log(apiUrl);
 const main = document.getElementById('main');
 const form = document.getElementById('form');
 const search = document.getElementById('search');
@@ -111,7 +110,6 @@ function setTags(){
                     selectorGenre.push(genre.id);
                 }
             }
-            console.log(selectorGenre);
             getMovies(apiUrl+'&with_genres='+encodeURI(selectorGenre.join(',')));
             highlightSelection();
         })
